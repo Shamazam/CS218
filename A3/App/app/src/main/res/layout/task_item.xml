@@ -1,0 +1,50 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/task_background"
+    android:padding="10dp"
+    android:layout_marginTop="8dp"
+    android:elevation="4dp"
+    android:gravity="center_vertical">
+
+    <!-- Task name display -->
+    <TextView
+        android:id="@+id/taskName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:padding="5dp"
+        android:textColor="#000"
+        android:text="Task Name"
+        android:textSize="16sp" />
+
+    <!-- Checkbox for task completion -->
+    <CheckBox
+        android:id="@+id/taskCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp" />
+
+    <!-- Edit Button -->
+    <Button
+        android:id="@+id/editTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/logoBlue"
+        android:layout_marginLeft="8dp" />
+
+    <!-- Delete Button -->
+    <Button
+        android:id="@+id/deleteTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/logoBlue"
+        android:layout_marginLeft="8dp" />
+</LinearLayout>

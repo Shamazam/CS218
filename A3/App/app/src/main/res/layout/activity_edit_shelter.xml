@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="AdminAddShelter.EditShelterActivity">
+
+    <!-- Custom Toolbar with Centered Title -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <!-- Centered Title -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Edit Shelter Details"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- ScrollView to allow scrolling the entire content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Shelter List Spinner -->
+            <Spinner
+                android:id="@+id/shelter_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dropdown" />
+
+            <!-- Shelter Name -->
+            <EditText
+                android:id="@+id/shelter_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Shelter Name"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_background" />
+
+            <!-- Person in Charge -->
+            <EditText
+                android:id="@+id/person_in_charge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Person in Charge"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_background" />
+
+            <!-- Primary Contact -->
+            <EditText
+                android:id="@+id/primary_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Primary Contact"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_background" />
+
+            <!-- Secondary Contact -->
+            <EditText
+                android:id="@+id/secondary_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Secondary Contact"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_background" />
+
+            <!-- Street Address -->
+            <EditText
+                android:id="@+id/street_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Street Address"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_background" />
+
+            <!-- Town -->
+            <EditText
+                android:id="@+id/town"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Town"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_background" />
+
+            <!-- City -->
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_background" />
+
+            <!-- Region -->
+            <EditText
+                android:id="@+id/region"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Region"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_background" />
+
+            <!-- Google Map Container -->
+            <FrameLayout
+                android:id="@+id/map_container"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+
+                <fragment
+                    android:id="@+id/mapFragment"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+            <!-- Capacity -->
+            <EditText
+                android:id="@+id/capacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Capacity"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_background" />
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/logoBlue"
+                android:layout_marginTop="16dp" />
+
+            <!-- Delete Button -->
+            <Button
+                android:id="@+id/delete_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

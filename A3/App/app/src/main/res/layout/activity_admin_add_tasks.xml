@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="AdminDisasterTips.AdminAddTasksActivity">
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Custom Toolbar with Centered Title -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp">
+
+                    <!-- Centered Title -->
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Manage Disaster Tasks"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <!-- Add Disaster Section -->
+            <LinearLayout
+                android:id="@+id/container_disaster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="10dp"
+                android:background="@drawable/rounded_corner_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Disaster"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:layout_gravity="center" />
+
+                <EditText
+                    android:id="@+id/disaster_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Disaster Name"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background="@drawable/edit_text_background" />
+
+                <Button
+                    android:id="@+id/btn_submit_disaster"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit Disaster"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/logoBlue"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <!-- Add Task Section -->
+            <LinearLayout
+                android:id="@+id/container_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="10dp"
+                android:background="@drawable/rounded_corner_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Task"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:layout_gravity="center" />
+
+                <Spinner
+                    android:id="@+id/spinner_disasters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:paddingEnd="24dp"
+                    android:background="@drawable/spinner_background"
+                    android:spinnerMode="dropdown" />
+
+                <EditText
+                    android:id="@+id/task_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Task Name"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background="@drawable/edit_text_background" />
+
+                <Button
+                    android:id="@+id/btn_submit_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit Task"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/logoBlue"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <!-- Edit Disaster Section -->
+            <LinearLayout
+                android:id="@+id/container_edit_disaster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="10dp"
+                android:background="@drawable/rounded_corner_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Disaster Name"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:layout_gravity="center" />
+
+                <Spinner
+                    android:id="@+id/spinner_edit_disaster"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background="@drawable/spinner_background"
+                    android:spinnerMode="dropdown" />
+
+                <EditText
+                    android:id="@+id/new_disaster_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="New Disaster Name"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background="@drawable/edit_text_background" />
+
+                <Button
+                    android:id="@+id/btn_edit_disaster"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Disaster Name"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/logoBlue"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <!-- Edit Task Section -->
+            <LinearLayout
+                android:id="@+id/container_edit_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="10dp"
+                android:background="@drawable/rounded_corner_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Task Name"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:layout_gravity="center" />
+
+                <Spinner
+                    android:id="@+id/spinner_edit_task_disasters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background="@drawable/spinner_background"
+                    android:spinnerMode="dropdown" />
+
+                <Spinner
+                    android:id="@+id/spinner_edit_tasks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background="@drawable/spinner_background"
+                    android:spinnerMode="dropdown" />
+
+                <EditText
+                    android:id="@+id/new_task_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="New Task Name"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background="@drawable/edit_text_background" />
+
+                <Button
+                    android:id="@+id/btn_edit_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Task Name"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/logoBlue"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <!-- Delete Disaster Section -->
+            <LinearLayout
+                android:id="@+id/container_delete_disaster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="10dp"
+                android:background="@drawable/rounded_corner_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete Disaster"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:layout_gravity="center" />
+
+                <Spinner
+                    android:id="@+id/spinner_delete_disasters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:paddingEnd="24dp"
+                    android:background="@drawable/spinner_background"
+                    android:spinnerMode="dropdown" />
+
+                <Button
+                    android:id="@+id/btn_delete_disaster"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delete Disaster"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@android:color/holo_red_dark"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <!-- Delete Task Section -->
+            <LinearLayout
+                android:id="@+id/container_delete_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="10dp"
+                android:background="@drawable/rounded_corner_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete Task"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:layout_gravity="center" />
+
+                <Spinner
+                    android:id="@+id/spinner_delete_task_disasters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:paddingEnd="24dp"
+                    android:background="@drawable/spinner_background"
+                    android:spinnerMode="dropdown" />
+
+                <Spinner
+                    android:id="@+id/spinner_delete_tasks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:paddingEnd="24dp"
+                    android:background="@drawable/spinner_background"
+                    android:spinnerMode="dropdown" />
+
+                <Button
+                    android:id="@+id/btn_delete_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delete Task"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@android:color/holo_red_dark"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

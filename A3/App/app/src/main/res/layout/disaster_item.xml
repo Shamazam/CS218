@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@android:color/white"
+    android:elevation="2dp"
+    android:layout_marginTop="10dp">
+    <!--  Disaster Name Row with Arrow  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/logoBlue"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/disasterName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Disaster Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center_vertical" />
+        <!--  Arrow for Expand/Collapse  -->
+        <ImageView
+            android:id="@+id/expandArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"
+            android:contentDescription="Expand/Collapse"
+            android:padding="5dp"
+            app:tint="@color/white" />
+    </LinearLayout>
+    <!--  Task List Layout (Will be dynamically populated with tasks)  -->
+    <LinearLayout android:id="@+id/taskListLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone"/>
+    <!--  Initially hidden and expanded when the user clicks the disaster name or arrow  -->
+    <EditText android:id="@+id/addTaskInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Add a new task" android:layout_marginTop="8dp"/>
+    <Button android:id="@+id/addTaskButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add" android:textColor="@color/white" android:backgroundTint="@color/logoBlue" android:layout_marginTop="8dp" android:layout_gravity="right"/>
+</LinearLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="AdminEmergencyContacts.AdminAddEmergency">
+
+    <!-- ScrollView to make the content scrollable -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Custom Toolbar with Centered Title -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp">
+
+                    <!-- Centered Title -->
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Emergency Contacts"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <!-- Add Department Section -->
+            <LinearLayout
+                android:id="@+id/container_department"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="10dp"
+                android:background="@drawable/rounded_corner_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Department"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:layout_gravity="center" />
+
+                <EditText
+                    android:id="@+id/department_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Department Name"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background="@drawable/edit_text_background" />
+
+                <Button
+                    android:id="@+id/btn_submit_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit Department"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/logoBlue"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Add Emergency Contact Section -->
+            <LinearLayout
+                android:id="@+id/container_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="10dp"
+                android:background="@drawable/rounded_corner_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Emergency Contact"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:layout_gravity="center" />
+
+                <Spinner
+                    android:id="@+id/spinner_departments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/spinner_background"
+                    android:spinnerMode="dropdown" />
+
+                <EditText
+                    android:id="@+id/building_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Building Name"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background="@drawable/edit_text_background" />
+
+                <EditText
+                    android:id="@+id/landline_number_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Landline Number 1"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background="@drawable/edit_text_background" />
+
+                <EditText
+                    android:id="@+id/landline_number_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Landline Number 2 (Optional)"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background="@drawable/edit_text_background" />
+
+                <EditText
+                    android:id="@+id/mobile_number_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile Number 1"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background="@drawable/edit_text_background" />
+
+                <EditText
+                    android:id="@+id/street_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Street Address"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background="@drawable/edit_text_background" />
+
+                <EditText
+                    android:id="@+id/town"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Town"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background="@drawable/edit_text_background" />
+
+                <EditText
+                    android:id="@+id/city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="City"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background="@drawable/edit_text_background" />
+
+                <AdminEmergencyContacts.MapTouchWrapper
+                    android:id="@+id/map_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="16dp">
+
+                    <fragment
+                        android:id="@+id/mapFragment"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </AdminEmergencyContacts.MapTouchWrapper>
+
+                <Button
+                    android:id="@+id/btn_submit_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit Contact"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/logoBlue"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

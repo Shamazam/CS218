@@ -1,0 +1,21 @@
+<resources>
+    <!-- Define your primary colors here -->
+    <color name="colorPrimary">#6200EE</color> <!-- Add this if it's missing -->
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <!-- You can add more colors if needed -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="lightGray">#D3D3D3</color>
+    <color name="primaryColor">#3F51B5</color>
+    <color name="button_blue">#3F51B5</color>
+    <color name="blue">#0000FF</color>
+    <color name="logoOrange">#C88246</color>
+    <color name="logoBlue">#506E8C</color>
+
+
+
+
+</resources>

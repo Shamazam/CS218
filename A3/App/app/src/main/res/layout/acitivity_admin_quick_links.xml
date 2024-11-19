@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="AdminQuickLinks.AdminQuickLinksActivity">
+
+    <!-- ScrollView to make the entire content scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Main Content Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header with Back Arrow and Centered Title -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="?attr/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/backArrow"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_back"
+                    android:contentDescription="Back Arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Manage Quick Links"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+            </RelativeLayout>
+
+            <!-- Section: Add New Category -->
+            <TextView
+                android:id="@+id/text_add_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Category"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/categoryField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Category"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/submitCategoryBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit Category"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/logoBlue"/>
+
+            <!-- Section: Edit and Delete Category -->
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:paddingEnd="24dp"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dropdown" />
+
+            <EditText
+                android:id="@+id/editCategoryField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Edit Category"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/submitEditCategoryBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update Category"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/logoBlue"/>
+
+            <Button
+                android:id="@+id/deleteCategoryBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delete Category"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@android:color/holo_red_dark"/>
+
+            <!-- Section: Add Quick Link -->
+            <TextView
+                android:id="@+id/text_add_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Quick Link"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/linkCategorySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:paddingEnd="24dp"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dropdown" />
+
+            <EditText
+                android:id="@+id/linkTitleField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Link Title"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/linkUrlField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Link URL"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/submitLinkBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit Link"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/logoBlue"/>
+
+            <!-- Section: Delete Quick Link -->
+            <TextView
+                android:id="@+id/text_delete_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete Quick Link"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/deleteLinkCategorySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:paddingEnd="24dp"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:id="@+id/linkSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:paddingEnd="24dp"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dropdown" />
+
+            <Button
+                android:id="@+id/deleteLinkBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delete Link"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@android:color/holo_red_dark"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

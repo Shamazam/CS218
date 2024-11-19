@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:background="#F7F7F7">
+
+        <!-- App Logo -->
+        <ImageView
+            android:id="@+id/appLogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="App Logo"/>
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ReadyFiji"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Email Input Field -->
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email or Username"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/rounded_edit_text"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Password Input Field -->
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:background="@drawable/rounded_edit_text"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Forgot Password Link -->
+        <TextView
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot password?"
+            android:textColor="#4C8BF5"
+            android:textSize="14sp"
+            android:layout_gravity="end"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:backgroundTint="@color/logoBlue"
+            android:textColor="@android:color/white"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- "Don't have an account?" text -->
+        <TextView
+            android:id="@+id/registerPrompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Register here Link -->
+        <TextView
+            android:id="@+id/registerHere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register here"
+            android:textColor="@color/logoBlue"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</ScrollView>

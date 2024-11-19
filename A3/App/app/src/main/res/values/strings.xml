@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ReadyFiji</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="default_notification_channel_id">default_channel</string>
+    <string-array name="area_types">
+        <item>prone_to_flooding</item>
+        <item>currently_flooded</item>
+    </string-array>
+</resources>

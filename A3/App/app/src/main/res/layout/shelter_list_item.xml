@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_background"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp">
+
+    <!-- Shelter Name with Arrow -->
+<RelativeLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content">
+
+<TextView
+    android:id="@+id/shelterName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Shelter Name"
+    android:textSize="16sp"
+    android:textStyle="bold" />
+
+<ImageView
+    android:id="@+id/arrowIcon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_arrow_down"
+android:layout_alignParentEnd="true"
+android:layout_centerVertical="true" />
+</RelativeLayout>
+
+    <!-- Hidden Content for Shelter Details -->
+<LinearLayout
+android:id="@+id/shelterDetails"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:visibility="gone"
+android:paddingTop="8dp">
+
+<TextView
+    android:id="@+id/personInCharge"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textStyle="bold"
+    android:text="Person in Charge: John Doe" />
+
+<TextView
+    android:id="@+id/contactNumber"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textStyle="bold"
+    android:text="Contact: 123456789" />
+
+<TextView
+    android:id="@+id/secondaryContact"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textStyle="bold"
+    android:text="Secondary Contact: 987654321" />
+
+<TextView
+    android:id="@+id/address"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textStyle="bold"
+    android:text="Address: 123 Street, Town, City, Region" />
+
+<TextView
+    android:id="@+id/occupancy"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textStyle="bold"
+    android:text="Capacity: 50/100" />
+
+<TextView
+    android:id="@+id/isFull"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textStyle="bold"
+    android:text="Status: Available" />
+</LinearLayout>
+    </LinearLayout>

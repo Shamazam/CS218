@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="8dp">
+
+    <!-- Shelter Title -->
+    <TextView
+        android:id="@+id/shelterTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shelter Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Expandable Details -->
+    <LinearLayout
+        android:id="@+id/shelterDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+    android:padding="8dp"
+    android:background="@android:color/darker_gray">
+
+    <TextView android:id="@+id/personInCharge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Person In Charge: " />
+    <TextView android:id="@+id/contactNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact Number: " />
+    <TextView android:id="@+id/secondaryContact" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Secondary Contact: " />
+    <TextView android:id="@+id/locationAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Address: " />
+    <TextView android:id="@+id/shelterCapacity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Capacity: " />
+    <TextView android:id="@+id/peopleCurrentlyThere" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Current Occupancy: " />
+    <TextView android:id="@+id/shelterFull" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Status: Not Full" />
+</LinearLayout>
+    </LinearLayout>

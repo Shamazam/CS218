@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="AdminNotification.SendNotificationActivity">
+
+    <!-- ScrollView to make the entire content scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Toolbar with centered title and left-aligned back arrow -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp">
+
+                    <!-- Centered Title -->
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Send Notification"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <!-- Notification Title input -->
+            <EditText
+                android:id="@+id/notification_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Notification Title"
+                android:padding="12dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_background"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Notification Message input -->
+            <EditText
+                android:id="@+id/notification_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Notification Message"
+                android:padding="12dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_background"
+                android:minHeight="150dp"
+                android:gravity="top"
+                app:layout_constraintTop_toBottomOf="@id/notification_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Send Notification Button -->
+            <Button
+                android:id="@+id/btn_send_notification"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/logoBlue"
+                android:text="Send Notification"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notification_message" />
+
+            <!-- Spinner to show notification titles -->
+            <Spinner
+                android:id="@+id/notification_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/spinner_background"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@id/btn_send_notification"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Delete Notification Button -->
+            <Button
+                android:id="@+id/btn_delete_notification"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Delete Notification"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@android:color/holo_red_dark"
+                app:layout_constraintTop_toBottomOf="@id/notification_spinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

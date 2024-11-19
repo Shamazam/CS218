@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Category Header with title and arrow icon (clickable area) -->
+        <LinearLayout
+            android:id="@+id/categoryHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp">
+
+            <!-- Category Title -->
+            <TextView
+                android:id="@+id/categoryTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <!-- Arrow Icon for Expand/Collapse -->
+            <ImageView
+                android:id="@+id/arrowIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_down" />
+        </LinearLayout>
+
+        <!-- Collapsible container for links -->
+        <LinearLayout
+            android:id="@+id/linkContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <!-- Links will be dynamically added here -->
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

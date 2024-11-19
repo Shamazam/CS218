@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="readyfiji.app">
+
+    <!-- Add the INTERNET permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- Required to keep the app active for background notifications -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        tools:targetApi="31"
+        android:name="readyfiji.app.MyApp"
+        android:label="ReadyFiji"
+        android:theme="@style/AppTheme"
+        android:enableOnBackInvokedCallback="true"
+        tools:ignore="MissingClass">
+
+        <!-- Declare Login Activity -->
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="LoginRegister.Login"
+            android:exported="true" />
+
+        <!-- Declare Register Activity -->
+        <activity
+            android:name="LoginRegister.Register"
+            android:exported="true" />
+
+        <!-- Declare HomeScreen Activity -->
+        <activity
+             android:name="HomeScreen.HomeScreen"
+             android:exported="true" />
+
+         <activity
+             android:name="readyfiji.app.ToDoListActivity"
+             android:exported="true" />
+
+         <activity
+             android:name="DisasterMap.DisasterMapActivity"
+             android:exported="true" />
+
+         <activity
+             android:name="Shelter.ShelterActivity"
+             android:exported="true" />
+
+         <activity
+             android:name="EmergencyContacts.EmergencyContactsActivity"
+             android:exported="true" />
+
+         <activity
+             android:name="NotificationInbox.NotificationHistoryActivity"
+             android:exported="true" />
+
+         <activity
+             android:name="ChangePassword.ChangePasswordActivity"
+             android:exported="true" />
+
+         <activity
+             android:name="ForgotPassword.ForgotPasswordActivity"
+             android:exported="true" />
+
+         <activity
+             android:name="EditProfile.EditProfileActivity"
+             android:exported="true" />
+
+        <activity
+            android:name="QuickLinks.QuickLinksActivity"
+            android:exported="true" />
+        <activity
+            android:name="AboutUs.AboutUsActivity"
+            android:exported="true" />
+
+         <activity
+             android:name="AdminAddShelter.AddShelterActivity"
+             android:exported="true" />
+
+         <activity
+             android:name="AdminDisasterTips.AdminAddTasksActivity"
+             android:exported="true" />
+
+        <activity
+             android:name="AdminEmergencyContacts.AdminAddEmergency"
+             android:exported="true" />
+         <activity
+             android:name="AdminSendAlert.SendAlertActivity"
+             android:exported="true" />
+
+        <activity
+            android:name="AdminNotification.SendNotificationActivity"
+            android:exported="true" />
+
+        <activity
+            android:name="AdminHomeScreen.AdminDashBoardActivity"
+            android:exported="true" />
+
+        <activity
+            android:name="Weather.AdminMapActivity"
+            android:exported="true" />
+
+        <activity
+            android:name="AdminAddShelter.EditShelterActivity"
+            android:exported="true" />
+
+        <activity
+            android:name="AdminAddShelter.AdminShelterCapacityActivity"
+            android:exported="true" />
+
+        <activity
+            android:name="AdminEmergencyContacts.AdminEditEmergencyActivity"
+            android:exported="true" />
+
+        <activity
+            android:name="SuperAdmin.EditAdminActivity"
+            android:exported="true" />
+
+        <activity
+            android:name="SuperAdmin.AddAdminActivity"
+            android:exported="true" />
+
+        <activity
+            android:name="AdminQuickLinks.AdminQuickLinksActivity"
+            android:exported="true" />
+
+        <activity
+            android:name="SuperAdmin.SuperAdminDashboardActivity"
+            android:exported="true" />
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA1khn_br7LHgjpRvHIdgyeJwI5yjS3h9U" />
+
+
+    </application>
+
+</manifest>

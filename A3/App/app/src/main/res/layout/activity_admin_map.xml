@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Weather.AdminMapActivity">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Main Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header with Back Arrow and Centered Title -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:paddingTop="24dp"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/backArrow"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_back"
+                    android:contentDescription="Back Arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Add/Delete Flooding Areas"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+            </RelativeLayout>
+
+            <!-- Input Field for Flood Type -->
+            <EditText
+                android:id="@+id/floodTypeInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter New Flood Type"
+                android:layout_marginBottom="16dp"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background" />
+
+            <!-- Submit Button for Flood Type -->
+            <Button
+                android:id="@+id/submitFloodTypeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit New Flood Type"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/logoBlue"
+                android:textColor="@android:color/white" />
+
+            <!-- Spinner for displaying current flood types -->
+            <Spinner
+                android:id="@+id/currentFloodTypeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:padding="12dp"
+                android:background="@drawable/spinner_background" />
+
+            <!-- Delete Flood Type Button -->
+            <Button
+                android:id="@+id/deleteFloodTypeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete Flood Type"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:textColor="@android:color/white" />
+
+            <!-- Spinner for Flood Types (for polygons) -->
+            <Spinner
+                android:id="@+id/floodTypeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:padding="12dp"
+                android:background="@drawable/spinner_background" />
+
+            <!-- Map Fragment -->
+            <fragment
+                android:id="@+id/mapFragment"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginBottom="16dp"
+                tools:ignore="MissingConstraints" />
+
+            <!-- Button Layout Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="3"
+                android:layout_marginTop="16dp">
+
+                <!-- Draw Polygon Button -->
+                <Button
+                    android:id="@+id/drawPolygonButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="@color/button_blue"
+                    android:text="Draw Polygon"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="true" />
+
+                <!-- Clear Polygon Button -->
+                <Button
+                    android:id="@+id/clearPolygonButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="@color/black"
+                    android:text="Clear Polygon"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="true" />
+
+                <!-- Save Polygon Button -->
+                <Button
+                    android:id="@+id/savePolygonButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/button_blue"
+                    android:text="Save Polygon"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="true" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

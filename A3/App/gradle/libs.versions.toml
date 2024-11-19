@@ -1,0 +1,51 @@
+[versions]
+agp = "8.6.1"
+circleimageview = "3.1.0"
+compiler = "4.15.1"
+firebaseBom = "33.3.0"
+firebaseBomVersion = "33.4.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.6.1"
+loggingInterceptor = "5.0.0-alpha.2"
+material = "1.10.0"
+activity = "1.9.2"
+constraintlayout = "2.1.4"
+materialVersion = "1.8.0"
+mysqlConnectorJava = "5.1.49"
+recyclerview = "1.2.1"
+retrofit = "2.9.0"
+firebaseInappmessaging = "21.0.0"
+playServicesMaps = "19.0.0"
+drawerlayout = "1.1.1"
+firebaseMessaging = "24.0.1"
+
+[libraries]
+circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
+compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-bom-v3340 = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBomVersion" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "compiler" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+material-v180 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
+mysql-connector-java = { module = "mysql:mysql-connector-java", version.ref = "mysqlConnectorJava" }
+recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+firebase-inappmessaging = { group = "com.google.firebase", name = "firebase-inappmessaging", version.ref = "firebaseInappmessaging" }
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+drawerlayout = { group = "androidx.drawerlayout", name = "drawerlayout", version.ref = "drawerlayout" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }

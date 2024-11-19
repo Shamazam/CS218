@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="?attr/colorPrimary">
+
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back"
+                android:contentDescription="Back Arrow" />
+
+            <!-- Title in the Center -->
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Edit Admin"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Spinner to Select Admin Username -->
+        <Spinner
+            android:id="@+id/adminSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:background="@drawable/spinner_background"
+            android:spinnerMode="dropdown" />
+
+        <!-- Form Fields for Admin Details -->
+        <EditText
+            android:id="@+id/firstNameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_background" />
+
+        <EditText
+            android:id="@+id/lastNameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_background" />
+
+        <EditText
+            android:id="@+id/usernameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_background" />
+
+        <!-- Submit Button to Save Changes -->
+        <Button
+            android:id="@+id/submitEditButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Changes"
+            android:textColor="@android:color/white"
+            android:background="@color/logoBlue"
+            android:layout_marginTop="24dp"
+            android:padding="12dp" />
+
+        <!-- Section to Change Admin Password -->
+        <TextView
+            android:id="@+id/passwordSectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Admin Password"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:textSize="16sp" />
+
+        <!-- Spinner to Select Admin Username for Password Change -->
+        <Spinner
+            android:id="@+id/adminPasswordSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:background="@drawable/spinner_background"
+            android:spinnerMode="dropdown" />
+
+        <EditText
+            android:id="@+id/newPasswordField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="New Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_background" />
+
+        <EditText
+            android:id="@+id/confirmNewPasswordField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm New Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_background" />
+
+        <!-- Submit Button to Change Password -->
+        <Button
+            android:id="@+id/submitPasswordButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Password"
+            android:textColor="@android:color/white"
+            android:background="@color/logoBlue"
+            android:layout_marginTop="24dp"
+            android:padding="12dp" />
+
+    </LinearLayout>
+</ScrollView>

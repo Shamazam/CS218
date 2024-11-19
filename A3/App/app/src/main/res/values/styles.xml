@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/values/styles.xml -->
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Customize your theme here -->
+        <!-- Add your custom colors, styles, etc. -->
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <!-- More customizations can be added here -->
+    </style>
+
+        <!-- Circular Shape Style -->
+        <style name="CircleImageStyle" parent="ShapeAppearance.MaterialComponents">
+            <item name="cornerFamily">rounded</item>
+            <item name="cornerSize">50%</item> <!-- This ensures the image becomes circular -->
+        </style>
+
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="AdminShelterCapacityActivity">
+
+    <!-- ScrollView to make the entire content scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Main Content Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header with Back Arrow and Centered Title -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="?attr/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/backArrow"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_back"
+                    android:contentDescription="Back Arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Shelter Capacity"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+            </RelativeLayout>
+
+            <!-- Spinner for Shelter List -->
+            <TextView
+                android:id="@+id/text_shelter_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Shelter"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <Spinner
+                android:id="@+id/shelterSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:paddingEnd="24dp"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dropdown" />
+
+            <!-- Display Current Capacity -->
+            <TextView
+                android:id="@+id/text_current_capacity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Capacity"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/currentCapacityField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginTop="8dp"
+                android:editable="false" />
+
+            <!-- Input for New Capacity -->
+            <TextView
+                android:id="@+id/text_new_capacity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter New Capacity"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <EditText
+                android:id="@+id/newCapacityField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter New Capacity"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginTop="8dp"
+                android:inputType="number" />
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/submitCapacityBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit Change"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/logoBlue"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

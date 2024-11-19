@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_background"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp">
+
+    <!-- Contact Name with Arrow -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/contactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Name"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/arrowIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_down"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- Hidden Content for Contact Details -->
+    <LinearLayout
+        android:id="@+id/contactDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:paddingTop="8dp">
+
+        <!-- Landline 1 Label and Number -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Landline 1: "
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/landline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123456"
+                android:textColor="@android:color/holo_blue_dark"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+        <!-- Landline 1 Label and Number -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Landline 2: "
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/landline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123456"
+                android:textColor="@android:color/holo_blue_dark"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- Mobile 1 Label and Number -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile 1: "
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/mobile1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="987654"
+                android:textColor="@android:color/holo_blue_dark"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- Mobile 2 Label and Number -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile 2: "
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/mobile2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="567890"
+                android:textColor="@android:color/holo_blue_dark"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- Mobile 3 Label and Number -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile 3: "
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/mobile3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="567890"
+                android:textColor="@android:color/holo_blue_dark"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- Mobile 4 Label and Number -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile 4: "
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/mobile4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="567890"
+                android:textColor="@android:color/holo_blue_dark"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- Address, Town, City, Region -->
+        <TextView
+            android:id="@+id/contactDetailsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Address: Some address here\nTown: Some town\nCity: Some city\nRegion: Some region" />
+    </LinearLayout>
+</LinearLayout>
